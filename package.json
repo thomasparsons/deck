@@ -1,0 +1,18 @@
+{
+  "name": "deck",
+  "private": false,
+  "description": "A simple card deck creator and shuffler",
+  "repository": "thomasparsons/deck",
+  "main": "lib/index.js",
+  "version": "0.0.1",
+  "author": "Tom Parsons",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.4.4"
+  }
+}
