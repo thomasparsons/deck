@@ -22,9 +22,23 @@ function createDeck(props) {
     });
   });
 
-  if (props && props.shuffle) {
-    return (0, _.Shuffle)({ deck: allCards });
+  var packs = props && props.packs || 1;
+
+  var deck = [];
+
+  if (packs > 1) {
+    for (var i = 0; i < packs; i += 1) {
+      allCards.map(function (c) {
+        return deck.push(c);
+      });
+    }
+  } else {
+    deck = allCards;
   }
 
-  return allCards;
+  if (props && props.shuffle) {
+    return (0, _.Shuffle)({ deck: deck });
+  }
+
+  return deck;
 }
