@@ -23,6 +23,9 @@ function createDeck(props) {
   });
 
   var packs = props && props.packs || 1;
+  if (isNaN(packs)) {
+    throw new Error('packs must be an integer');
+  }
 
   var deck = [];
 
