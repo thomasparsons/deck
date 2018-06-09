@@ -31,6 +31,14 @@ import { Deck } from 'deck';
 console.log(Deck({ shuffled: true }));
 ```
 
+Multiple packs can be requested with a `packs` integer, 2 packs = 104 cards etc.
+
+```
+import { Deck } from 'deck';
+
+console.log(Deck({ packs: 2, shuffled: true }));
+```
+
 ## Decision Process
 
 I've left the cards as integers, instead of `ace`, `2`, `3`, ... `jack`, `queen`, `king`, in order to make the maths and precision of card moving (i.e. in solitaire or poker), simpler.
