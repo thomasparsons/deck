@@ -39,6 +39,15 @@ import { Deck } from 'deck';
 console.log(Deck({ packs: 2, shuffled: true }));
 ```
 
+## Additional Params
+Along with `packs` and `shuffled` you can also add Jokers to the pack, if you desire by running
+
+```
+import { Deck } from 'deck';
+
+console.log(Deck({ jokers: true }))
+```
+
 ## Decision Process
 
 I've left the cards as integers, instead of `ace`, `2`, `3`, ... `jack`, `queen`, `king`, in order to make the maths and precision of card moving (i.e. in solitaire or poker), simpler.
